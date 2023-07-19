@@ -59,7 +59,7 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [JavaScript]([https://rometools.github.io/rome/](https://www.javascript.com/)) - FrontEnd
+* [JavaScript](https://www.javascript.com/) - FrontEnd
 * [Node](https://nodejs.org/en) - Backend
 * [Express](https://expressjs.com/) - Backend Framework
 * [BootStrap](https://getbootstrap.com/) - Styling
