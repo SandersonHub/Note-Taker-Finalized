@@ -4,6 +4,7 @@ const fs = require("fs");
 
 // Sets up the express app
 var app = express();
+//env for heroku
 var PORT = process.env.PORT || 3001
 
 //handles data
