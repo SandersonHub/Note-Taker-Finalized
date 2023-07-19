@@ -1,7 +1,12 @@
+//importing the promises
+//Assigned const to fs
 const fs = require("fs").promises;
 
 let data;
 
+//async will return the promise
+//try will attempt to catc h an error 
+//await waiting for readFile() from fs 
 async function readData() {
   try {
     const fileContents = await fs.readFile("./db/db.json", "utf8");
