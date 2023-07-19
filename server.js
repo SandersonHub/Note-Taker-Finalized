@@ -7,9 +7,10 @@ var app = express();
 //env for heroku
 var PORT = process.env.PORT || 3001
 
-//handles data
+//Parse URL
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+//Setups middleware and looking for static files
 app.use(express.static("develop"));
 
 //Routes to HTML and API path
