@@ -9,7 +9,7 @@ var PORT = process.env.PORT || 3001
 //handles data
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use("/develop/assets", express.static(__dirname + "/develop/assets"));
+app.use(express.static("develop"));
 
 //Routes to HTML and API path
 require("./routes/HTMLPath")(app);
