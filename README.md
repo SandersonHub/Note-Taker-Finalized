@@ -1,6 +1,6 @@
 # Note Taker Application
 
-This application is called "Note Taker" that can be used to save and take notes at your convinecne. This applicaiton is built with JavaScript, Express.js, Bootstrap and HTML. This applicaiton is deployed through Github and Heroku. 
+This application is called "Note Taker" that can be used to save and take notes at your convinecne. This applicaiton is built with JavaScript, Node, Express.js, Bootstrap and HTML. This applicaiton is deployed through Github and Heroku. 
 //add links later
 
 ## Getting Started
@@ -59,9 +59,10 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [JavaScript]([https://rometools.github.io/rome/](https://www.javascript.com/)) - FrontEnd
+* [Node](https://nodejs.org/en)) - Backend
+* [Express](https://expressjs.com/) - Backend Framework
+* [BootStrap](https://getbootstrap.com/) - Styling
 
 ## Contributing
 
