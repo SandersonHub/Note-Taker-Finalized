@@ -1,6 +1,7 @@
 # Note Taker Application
 
-One Paragraph of project description goes here
+This application is called "Note Taker" that can be used to save and take notes at your convinecne. This applicaiton is built with JavaScript, Express.js, Bootstrap and HTML. This applicaiton is deployed through Github and Heroku. 
+//add links later
 
 ## Getting Started
 
