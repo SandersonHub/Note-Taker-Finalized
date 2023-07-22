@@ -1,61 +1,20 @@
 # Note Taker Application
 
 This application is called "Note Taker" that can be used to save and take notes at your convinecne. This applicaiton is built with JavaScript, Node, Express.js, Bootstrap and HTML. This applicaiton is deployed through Github and Heroku. 
-//add links later
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+Download the code or visit the direct Heroku link below.
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+Please use the Heroku direct application link to access the the webpage
+
+https://note-taker-21532342-c72d5d095233.herokuapp.com/notes
 
 ## Built With
 
@@ -64,24 +23,18 @@ Add additional notes about how to deploy this on a live system
 * [Express](https://expressjs.com/) - Backend Framework
 * [BootStrap](https://getbootstrap.com/) - Styling
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
 ## Authors
 
 * **Bradley Sanderson** - *Initial work* - [SandersonHub](https://github.com/SandersonHub)
 
-## License
+## Future Development
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+* In the future I would like to polish out the applicaiton and add some more styling, I would also like the delete function to work as intended. The delete icon in the applicaiton is just a placeholder.
 
 ## Acknowledgments
 
 * Huge Thank you to Github user [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) for the README template.
-* Inspiration
-* etc
+
+## Feature Photos
+
+![chrome_1miynS8yXA](https://github.com/SandersonHub/Note-Taker-Finalized/assets/128574459/fc24da37-ca0d-44ba-9404-6da7e02c3a01)
