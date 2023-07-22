@@ -1,52 +1,38 @@
-//importing the promises
-//Assigned const to fs
-const fs = require("fs").promises;
+//file system
+const fs = require("fs");
+//reads the db.json file
+var data = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
+module.exports = function(app) {
 
-let data;
-
-//async will return the promise
-//try will attempt to catc h an error 
-//await waiting for readFile() from fs 
-async function readData() {
-  try {
-    const fileContents = await fs.readFile("./db/db.json", "utf8");
-    data = JSON.parse(fileContents);
-  } catch (error) {
-    console.error("error writing", error);
-    data = [];
-  }
-}
-
-async function writeData() {
-  try {
-    await fs.writeFile("./db/db.json", JSON.stringify(data));
-  } catch (error) {
-    console.error("error", error);
-  }
-}
-
-module.exports = (app) => {
-  readData().catch((error) => console.error("reading initial error", error));
-
-  app.get("/api/notes", (req, res) => {
-    res.json(data);
-  });
-
-  app.get("/api/notes/:id", (req, res) => {
-    const noteId = Number(req.params.id);
-    const note = data.find((note) => note.id === noteId.toString());
-    res.json(note);
-  });
-
-  app.post("/api/notes", (req, res) => {
-    const newNote = req.body;
-    const uniqueId = data.length.toString();
-    console.log(uniqueId);
-    newNote.id = uniqueId;
-    data.push(newNote);
-
-    writeData().catch((error) => console.error("writing error", error));
-
-    res.json(data);
-  });
+    //GET
+    //routes to //api/notes
+    //takes to parameters req and res
+    //when a GET request is made this function will be called
+    app.get("/api/notes", function(req, res) {
+       res.json(data);
+    });
+    //GET
+    app.get("/api/notes/:id", function(req, res) {
+        //sends a JSON back to the client
+        //req.params.id is the id of the note
+        res.json(data[Number(req.params.id)]);
+    });
+    //POST
+    app.post("/api/notes", function(req, res) {
+        //req.body is the JSON post sent from the user
+        let newNote = req.body;
+        //sets the id of the note
+        let uniqueId = (data.length).toString();
+        //consonle.log the id
+        console.log(uniqueId);
+        //pushes the new note to the data array
+        newNote.id = uniqueId;
+        data.push(newNote);
+        
+        fs.writeFileSync("./db/db.json", JSON.stringify(data), function(err) {
+         //console.log if an error occurs
+            if (err) throw (err);        
+        }); 
+        res.json(data);    
+    });
 };

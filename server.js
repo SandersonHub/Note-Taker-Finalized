@@ -1,23 +1,20 @@
-// Dependents for express and fs
+//imports express
 const express = require("express");
-const fs = require("fs");
+//creates an instance of express and will define the routes
+const app = express();
+//env is for Heroku
+const PORT = process.env.PORT || 3001;
 
-// Sets up the express app
-var app = express();
-//env for heroku
-var PORT = process.env.PORT || 3001
-
-//Parse URL
-app.use(express.urlencoded({ extended: true }));
+// Parse application/json
 app.use(express.json());
-//Setups middleware and looking for static files
-app.use(express.static("develop"));
 
-//Routes to HTML and API path
-require("./routes/HTMLPath")(app);
-require("./routes/apiPath")(app);
+// Routes to the "routes" folder HTMLPath.js and apiPath.js
+app.use(require("./routes/HTMLPath"));
+app.use(require("./routes/apiPath"));
 
-//START!!!
-app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
+//Starts the server
+app.listen(PORT, () => {
+    //this tells us if the server is runnning
+    //port XXXX is whatever port it's using, in this case 3001.
+    console.log("PORT " + PORT);
 });
