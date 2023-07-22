@@ -1,20 +1,23 @@
-//imports express
+// Importing required modules
 const express = require("express");
-//creates an instance of express and will define the routes
+const fs = require("fs");
+
+// Create an instance of express and set up the port
 const app = express();
-//env is for Heroku
 const PORT = process.env.PORT || 3001;
 
-// Parse application/json
+// Parse URL-encoded and JSON request bodies
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Routes to the "routes" folder HTMLPath.js and apiPath.js
-app.use(require("./routes/HTMLPath"));
-app.use(require("./routes/apiPath"));
+// Set up static file serving from the "develop" directory
+app.use(express.static("develop"));
 
-//Starts the server
+// Set up routes for HTML and API paths
+require("./routes/HTMLPath")(app);
+require("./routes/apiPath")(app);
+
+// Start the server
 app.listen(PORT, () => {
-    //this tells us if the server is runnning
-    //port XXXX is whatever port it's using, in this case 3001.
-    console.log("PORT " + PORT);
+    console.log("App listening on PORT " + PORT);
 });
