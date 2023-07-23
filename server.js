@@ -5,6 +5,8 @@ const fs = require("fs");
 
 // Create an instance of express and set up the port
 const app = express();
+//logical OR operator ||
+//env used to heroku
 const PORT = process.env.PORT || 3001;
 
 // Goes through the express app which then turns into data phasing 
